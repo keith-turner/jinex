@@ -1,0 +1,23 @@
+What jars names contain a class?
+What classes reference a class?
+List classes w/ X references
+List classes w/ X jar files
+
+jar:<jar hash>
+  names:<name>
+  count:classes <count>
+
+class:<classname>
+  <class hash>:jars:<jar hash>
+  <class hash>:deps=<count>
+  refs:<class>:<hash>  //load to external index table
+
+crci:<depth>:<from prefix>:<count>:<to class> status:updated ""
+
+jrci:<count>:<class name> 
+
+
+
+
+
+
