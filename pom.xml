@@ -27,7 +27,7 @@
       <version>5.2</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.accumulo</groupId>
+      <groupId>accismus</groupId>
       <artifactId>accismus</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>

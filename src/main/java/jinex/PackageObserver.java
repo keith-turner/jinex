@@ -1,10 +1,11 @@
 package jinex;
 
-import org.apache.accumulo.accismus.api.Column;
-import org.apache.accumulo.accismus.api.Observer;
-import org.apache.accumulo.accismus.api.Transaction;
-import org.apache.accumulo.accismus.api.exceptions.AlreadySetException;
 import org.apache.accumulo.core.data.ByteSequence;
+
+import accismus.api.Column;
+import accismus.api.Observer;
+import accismus.api.Transaction;
+import accismus.api.exceptions.AlreadySetException;
 
 public class PackageObserver implements Observer{
 

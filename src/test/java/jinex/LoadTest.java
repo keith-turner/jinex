@@ -3,19 +3,6 @@ package jinex;
 import java.util.Collections;
 import java.util.Map.Entry;
 
-import jinex.PackageObserver;
-
-import org.apache.accumulo.accismus.api.Admin;
-import org.apache.accumulo.accismus.api.Column;
-import org.apache.accumulo.accismus.api.ColumnIterator;
-import org.apache.accumulo.accismus.api.LoaderExecutor;
-import org.apache.accumulo.accismus.api.RowIterator;
-import org.apache.accumulo.accismus.api.ScannerConfiguration;
-import org.apache.accumulo.accismus.api.Snapshot;
-import org.apache.accumulo.accismus.api.SnapshotFactory;
-import org.apache.accumulo.accismus.api.config.InitializationProperties;
-import org.apache.accumulo.accismus.api.config.LoaderExecutorProperties;
-import org.apache.accumulo.accismus.api.test.MiniAccismus;
 import org.apache.accumulo.core.client.security.tokens.PasswordToken;
 import org.apache.accumulo.core.data.ByteSequence;
 import org.apache.accumulo.core.data.Range;
@@ -25,6 +12,18 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
+
+import accismus.api.Admin;
+import accismus.api.Column;
+import accismus.api.ColumnIterator;
+import accismus.api.LoaderExecutor;
+import accismus.api.RowIterator;
+import accismus.api.ScannerConfiguration;
+import accismus.api.Snapshot;
+import accismus.api.SnapshotFactory;
+import accismus.api.config.InitializationProperties;
+import accismus.api.config.LoaderExecutorProperties;
+import accismus.api.test.MiniAccismus;
 
 public class LoadTest {
   public static TemporaryFolder folder = new TemporaryFolder();

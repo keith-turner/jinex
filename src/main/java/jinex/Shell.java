@@ -20,8 +20,7 @@ import java.io.File;
 import java.util.Properties;
 
 import jline.ConsoleReader;
-
-import org.apache.accumulo.accismus.api.config.AccismusProperties;
+import accismus.api.config.AccismusProperties;
 
 /**
  * 
