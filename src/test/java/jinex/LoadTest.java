@@ -1,5 +1,6 @@
 package jinex;
 
+import java.io.File;
 import java.util.Collections;
 import java.util.Map.Entry;
 
@@ -10,6 +11,7 @@ import org.apache.accumulo.minicluster.MiniAccumuloCluster;
 import org.apache.accumulo.minicluster.MiniAccumuloConfig;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
@@ -62,7 +64,10 @@ public class LoadTest {
     folder.delete();
   }
   
+  //TODO need a a real test!  the following is just for experimenting
+  
   @Test
+  @Ignore
   public void test1() throws Exception {
 
     LoaderExecutorProperties lep = new LoaderExecutorProperties(props);
@@ -71,9 +76,9 @@ public class LoadTest {
     
     LoaderExecutor le = new LoaderExecutor(lep);
     
+    JarMetadata jarMeta = new Parser().parseJar(new File("/opt/accumulo-1.6.0/lib/accumulo-core.jar"));
+    le.execute(new JarMetadataLoader(jarMeta));
     
-
-
     le.shutdown();
     
     miniAccismus.waitForObservers();

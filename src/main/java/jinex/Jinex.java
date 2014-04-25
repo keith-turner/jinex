@@ -80,7 +80,7 @@ public class Jinex {
       Entry<ByteSequence,ColumnIterator> rowEntries = iter.next();
       while (rowEntries.getValue().hasNext() && count < n) {
         Entry<Column,ByteSequence> col = rowEntries.getValue().next();
-        // System.out.println(rowEntries.getKey() + " " + col.getKey() + " " + col.getValue());
+        //System.out.println(rowEntries.getKey() + " " + col.getKey() + " " + col.getValue());
 
         String[] tokens = rowEntries.getKey().toString().split(":");
 

@@ -28,7 +28,7 @@ import accismus.api.config.AccismusProperties;
 public class Shell {
   public static void main(String[] args) throws Exception {
     
-    Properties props = new AccismusProperties(new File("accismus.properties"));
+    Properties props = new AccismusProperties(new File(args[0]));
     
     ConsoleReader reader = new ConsoleReader();
 
